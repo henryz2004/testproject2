@@ -6,10 +6,16 @@ export class NewScript extends BaseScriptComponent {
     @input spawnTime: number;
 
     onAwake() {
+        let store = global.persistentStorageSystem.store;
+		let scoreKey = "totalScore";
         var spawnEvent = this.createEvent("DelayedCallbackEvent")
         spawnEvent.bind(() => {
             this.spawnEnemy();
-            spawnEvent.reset(this.spawnTime);
+    
+    		let currentScore = store.getInt(scoreKey);
+            currentScore += 1;
+			store.putInt(scoreKey, currentScore);
+		
         })
         spawnEvent.reset(this.spawnTime);
     }

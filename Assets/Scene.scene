@@ -10,6 +10,7 @@
     - !<own> 92943462-b139-4c34-8933-6be4de3bb447
     - !<own> b9ed7c8a-4337-4468-a3f7-eb3a1f2a48c5
     - !<own> a4f98352-ac16-4f21-9aac-fb8c42d8b83d
+    - !<own> c2602146-adf8-4053-b9c7-a8bb682ae8a0
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -640,6 +641,29 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<BodyComponent/0e3cd268-aa36-4800-bbcd-653db704e890>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
 - !<Skin/1033a248-c85a-41d6-8395-d6ee6abf289a>
   PrefabRemaps:
     []
@@ -1278,6 +1302,26 @@
     CapitalizationOverride: None
     CapitilizationOverride: None
   DepthTest: false
+- !<RenderMeshVisual/1d660006-f5b1-4387-92e5-da31dd17dece>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0fbab5ae-2209-4e76-a112-fe4aee2e16ff
+  Mesh: !<reference> d97d6130-42c1-4659-81d7-1b52e539bd88
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/1da7f812-08b9-4c7b-9b8b-996de47227b9>
   PrefabRemaps:
     []
@@ -2624,26 +2668,6 @@
     []
   Components:
     - !<own> 6a314a3e-2266-4e96-8f18-06589901e5e2
-- !<RenderMeshVisual/4656dc3f-1961-4ad2-a25e-e3ca3c96404c>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> cd39fd43-95e3-40aa-8582-31e0dca501dc
-  Mesh: !<reference> 5c41a0be-29df-40aa-9eae-f442521eeccf
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/46b4c1d7-9dca-4b04-83b2-2d605318d219>
   PrefabRemaps:
     []
@@ -4198,8 +4222,8 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: -280.402374}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -4353,22 +4377,6 @@
       hoverAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
       triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
       triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/681dda9e-4916-45a8-87a8-f52d602238fd>
-  PrefabRemaps:
-    []
-  Name: ChatGPT API
-  Enabled: true
-  ScriptAsset: !<reference> 85d41ad1-9e0d-4d29-aa20-f749f319d4ed
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      remoteServiceModule: !<reference.RemoteServiceModule> a690b953-c8c9-4388-8b4c-c0248615d0a7
   ScriptTypes:
     "":
       {}
@@ -5562,6 +5570,22 @@
     - !<own> efd6cae4-4342-495e-95db-2a7814f483ee
   Components:
     []
+- !<ScriptComponent/8ccd575d-f701-4feb-a715-3aeb35806280>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/8d237f7b-32f4-4019-970c-f7db954b211f>
   PrefabRemaps:
     []
@@ -5721,22 +5745,6 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
-- !<SceneObject/92943462-b139-4c34-8933-6be4de3bb447>
-  PrefabRemaps:
-    - 4656dc3f-1961-4ad2-a25e-e3ca3c96404c: d7fef2fa-7596-481e-ad9c-5325b06cb2d2
-    - 92943462-b139-4c34-8933-6be4de3bb447: 4cf2c201-1594-405b-be7b-e198e2419bdd
-  Name: Laser
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 10.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 4656dc3f-1961-4ad2-a25e-e3ca3c96404c
 - !<Canvas/93da15f6-b214-42f8-890a-46bcb917b89a>
   PrefabRemaps:
     []
@@ -6129,21 +6137,6 @@
     []
   Components:
     - !<own> ff535890-84f2-455a-8017-452169943b54
-- !<SceneObject/a4f98352-ac16-4f21-9aac-fb8c42d8b83d>
-  PrefabRemaps:
-    []
-  Name: ChatGPT API
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 681dda9e-4916-45a8-87a8-f52d602238fd
 - !<SceneObject/a57a7ca3-e822-4148-855b-96a8a55a5b94>
   PrefabRemaps:
     []
@@ -7073,6 +7066,28 @@
   Components:
     - !<own> a1934755-c496-4664-a0cc-3297ba9e214a
     - !<own> eb821b92-3f17-4a34-b1d8-a0d8ac1c8fd4
+- !<SceneObject/c2602146-adf8-4053-b9c7-a8bb682ae8a0>
+  PrefabRemaps:
+    - 0e3cd268-aa36-4800-bbcd-653db704e890: f29e6423-8f41-45a6-8a98-7cdc0e768650
+    - 1d660006-f5b1-4387-92e5-da31dd17dece: 18858351-3e95-4d35-8d94-ef35dc1459b3
+    - 8ccd575d-f701-4feb-a715-3aeb35806280: 1150b8aa-edf5-4087-976e-80e232b3d48b
+    - c2602146-adf8-4053-b9c7-a8bb682ae8a0: 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b
+    - cfc68b9e-ba3f-409e-942a-aa0ff8fbcb95: 991d1551-a41b-4394-8767-ebae60bf4162
+  Name: Projectile
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1d660006-f5b1-4387-92e5-da31dd17dece
+    - !<own> 0e3cd268-aa36-4800-bbcd-653db704e890
+    - !<own> cfc68b9e-ba3f-409e-942a-aa0ff8fbcb95
+    - !<own> 8ccd575d-f701-4feb-a715-3aeb35806280
 - !<Text/c32234e2-149d-442f-bc96-05133dde8abf>
   PrefabRemaps:
     []
@@ -7344,7 +7359,7 @@
     "":
       attack_cooldown: !<float> 2.000000
       projectile_obj: !<reference.ObjectPrefab> 34e56010-2b68-46ec-a8c6-d0d0578715b5
-      launch_velocity: !<float> 10.000000
+      launch_velocity: !<float> 1.000000
   ScriptTypes:
     "":
       {}
@@ -7497,6 +7512,24 @@
     - !<own> e7c338ff-68af-4b04-8796-140dad3881df
   Components:
     []
+- !<ColliderComponent/cfc68b9e-ba3f-409e-942a-aa0ff8fbcb95>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
 - !<SceneObject/d0af4516-d483-45c2-b52a-98798daa54fb>
   PrefabRemaps:
     []
@@ -8092,7 +8125,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -30.632063}
+    position: {x: 0.000000, y: 0.000000, z: -170.151733}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false

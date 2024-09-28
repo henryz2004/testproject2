@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/c96778f6-2809-4b20-be09-08f26dd6c435>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 12609840-218d-451b-aa69-377ce59ddd62
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 12609840-218d-451b-aa69-377ce59ddd62
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7de6c1d5-f507-4950-9aee-c1023ec8f548
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/24423116-ab44-4265-8dc5-10709aba1252>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7de6c1d5-f507-4950-9aee-c1023ec8f548>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    orb: false
+    player: false
+    radius: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - orb: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      player: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      radius: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.ObjectPrefab orb
+    - // @input SceneObject player
+    - // @input float radius

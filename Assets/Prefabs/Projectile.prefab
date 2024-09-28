@@ -4,6 +4,22 @@
     - !<own> 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b
   LazyLoading: false
   RetainAssets: true
+- !<ScriptComponent/1150b8aa-edf5-4087-976e-80e232b3d48b>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/18858351-3e95-4d35-8d94-ef35dc1459b3>
   PrefabRemaps:
     []
@@ -41,6 +57,7 @@
     - !<own> 18858351-3e95-4d35-8d94-ef35dc1459b3
     - !<own> f29e6423-8f41-45a6-8a98-7cdc0e768650
     - !<own> 991d1551-a41b-4394-8767-ebae60bf4162
+    - !<own> 1150b8aa-edf5-4087-976e-80e232b3d48b
 - !<ColliderComponent/991d1551-a41b-4394-8767-ebae60bf4162>
   PrefabRemaps:
     []
