@@ -9,11 +9,16 @@ export class EnemyChase extends BaseScriptComponent {
     enemy = this.getSceneObject()
 
     onAwake() {
+        //print("HLOL")
+
+        this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
 
     }
 
     onUpdate(){
         this.move()
+
+        //print("HAHAHAH")
     }
 
     private move(): void{
@@ -21,11 +26,17 @@ export class EnemyChase extends BaseScriptComponent {
 
         let currPos: vec3 = this.enemy.getTransform().getWorldPosition()
 
+        //print(currPos)
+
+        //print(getDeltaTime())
+
         let move_vec: vec3 = userPos.sub(currPos)
 
         move_vec = move_vec.normalize()
 
         let newPos = currPos.add(move_vec.uniformScale(this.speed * getDeltaTime()))
+
+        //print(newPos)
 
         this.enemy.getTransform().setWorldPosition(newPos)
 

@@ -4,7 +4,6 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 597f6fa4-23e5-4230-9e74-1ece142cd000
-    - !<own> 55ec541e-e621-450d-a50a-c46ed8c65c50
     - !<own> ffab49d8-5118-45da-8fcc-ffa3cd677c9a
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
@@ -2804,22 +2803,6 @@
   Components:
     - !<own> 7cfba84e-6ef3-4b6f-833b-57850c31f5f2
     - !<own> acf6a26b-eab8-4b11-b31c-4d044ee0dbca
-- !<ScriptComponent/4c62ec08-2c96-4adf-882b-26dfc977291d>
-  PrefabRemaps:
-    []
-  Name: ClickScript
-  Enabled: true
-  ScriptAsset: !<reference> 8b7ce0c9-929a-4c27-add4-287f98ed1a44
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      objectToCreate: !<reference.ObjectPrefab> 1c833019-e4db-448f-b3a8-94f3076f340c
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/4c664911-501c-4767-acd8-a518afab6df2>
   PrefabRemaps:
     []
@@ -3317,21 +3300,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/55ec541e-e621-450d-a50a-c46ed8c65c50>
-  PrefabRemaps:
-    []
-  Name: ClickScript
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 4c62ec08-2c96-4adf-882b-26dfc977291d
 - !<SceneObject/566e90b3-eb9a-4b04-b1d1-65523ee95df9>
   PrefabRemaps:
     []
@@ -5451,7 +5419,7 @@
     {}
   ScriptInputs:
     "":
-      speed: !<float> 1.000000
+      speed: !<float> 100.000000
       userObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
   ScriptTypes:
     "":
