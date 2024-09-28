@@ -49,6 +49,7 @@
       jpeg: Performance Compression
     Overrides:
       {}
+  GenAiGenerated: true
 - !<AnimationPlayer/017e1386-17d8-4e3d-aa2a-48d039926a0b>
   PrefabRemaps:
     []

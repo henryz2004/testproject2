@@ -12,10 +12,23 @@
   ImporterSettings: !<AssetImporterSettings/570a81d3-76f1-4b2c-a65e-3b481acd01fb>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ColliderComponent/046cd47d-743b-43e2-8223-77e45cd60d0a>
+- !<ObjectPrefab/4006ddd6-595b-41e5-944a-a6350bc54c9e>
+  PackagePath: ""
+  objects:
+    - !<own> bb567146-f14d-42d6-ac19-c95346d2aafc
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/7040a696-d756-4502-9162-ec01283937be>
+  SourceRemaps:
+    - 18858351-3e95-4d35-8d94-ef35dc1459b3: cebbda0d-40ba-423f-99cf-53298733ea10
+    - 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b: bb567146-f14d-42d6-ac19-c95346d2aafc
+    - f29e6423-8f41-45a6-8a98-7cdc0e768650: aeef9691-632f-4a5a-b9e2-4682323060ad
+    - fbe5a101-9924-418b-aefa-f0ac92c7d368: e14c09b1-2ab5-4070-bb8d-1c37a54e251f
+  SourceState: !<own> 4006ddd6-595b-41e5-944a-a6350bc54c9e
+- !<BodyComponent/aeef9691-632f-4a5a-b9e2-4682323060ad>
   PrefabRemaps:
     []
-  Name: Physics Collider
+  Name: Physics Body
   Enabled: true
   Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
     FitVisual: true
@@ -30,7 +43,12 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
-- !<SceneObject/29249300-96fb-4b02-9e41-4256f7053cf5>
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<SceneObject/bb567146-f14d-42d6-ac19-c95346d2aafc>
   PrefabRemaps:
     []
   Name: Projectile
@@ -44,27 +62,30 @@
   Children:
     []
   Components:
-    - !<own> 761207e4-2613-4c6b-a157-6b6127222f02
-    - !<own> 5fee0c8b-7f71-4491-bb41-093068be15d9
-    - !<own> 046cd47d-743b-43e2-8223-77e45cd60d0a
-- !<SceneObject/52ade542-d031-43f4-a932-a630161a716d>
+    - !<own> cebbda0d-40ba-423f-99cf-53298733ea10
+    - !<own> aeef9691-632f-4a5a-b9e2-4682323060ad
+    - !<own> e14c09b1-2ab5-4070-bb8d-1c37a54e251f
+- !<RenderMeshVisual/cebbda0d-40ba-423f-99cf-53298733ea10>
   PrefabRemaps:
     []
-  Name: Projectile
+  Name: Render Mesh Visual
   Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> dea2c638-6ac1-48a5-a9dc-7736dca32b79
-    - !<own> a287053b-6f98-4eb1-a81c-dd01f79b61e0
-    - !<own> 5f8835e3-f306-44a2-82a3-25379159e6d5
-- !<ScriptComponent/5f8835e3-f306-44a2-82a3-25379159e6d5>
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0fbab5ae-2209-4e76-a112-fe4aee2e16ff
+  Mesh: !<reference> d97d6130-42c1-4659-81d7-1b52e539bd88
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/e14c09b1-2ab5-4070-bb8d-1c37a54e251f>
   PrefabRemaps:
     []
   Name: Projectile
@@ -80,108 +101,3 @@
   ScriptTypes:
     "":
       {}
-- !<BodyComponent/5fee0c8b-7f71-4491-bb41-093068be15d9>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: true
-  BodySetting: Density
-  BodySettingValue: 1.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
-- !<ObjectPrefab/6bc173b0-d9bb-4eff-9f56-eaa41f861f7a>
-  PackagePath: ""
-  objects:
-    - !<own> 52ade542-d031-43f4-a932-a630161a716d
-  LazyLoading: false
-  RetainAssets: true
-- !<ObjectPrefabAssetData/7040a696-d756-4502-9162-ec01283937be>
-  SourceRemaps:
-    - 18858351-3e95-4d35-8d94-ef35dc1459b3: dea2c638-6ac1-48a5-a9dc-7736dca32b79
-    - 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b: 52ade542-d031-43f4-a932-a630161a716d
-    - f29e6423-8f41-45a6-8a98-7cdc0e768650: a287053b-6f98-4eb1-a81c-dd01f79b61e0
-    - fbe5a101-9924-418b-aefa-f0ac92c7d368: 5f8835e3-f306-44a2-82a3-25379159e6d5
-  SourceState: !<own> 6bc173b0-d9bb-4eff-9f56-eaa41f861f7a
-- !<RenderMeshVisual/761207e4-2613-4c6b-a157-6b6127222f02>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 0fbab5ae-2209-4e76-a112-fe4aee2e16ff
-  Mesh: !<reference> d97d6130-42c1-4659-81d7-1b52e539bd88
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<ObjectPrefab/8e300180-501b-46cf-bd06-a5c91e9d2bd6>
-  PackagePath: ""
-  objects:
-    - !<own> 29249300-96fb-4b02-9e41-4256f7053cf5
-  LazyLoading: false
-  RetainAssets: true
-- !<BodyComponent/a287053b-6f98-4eb1-a81c-dd01f79b61e0>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: true
-  BodySetting: Density
-  BodySettingValue: 1.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
-- !<RenderMeshVisual/dea2c638-6ac1-48a5-a9dc-7736dca32b79>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 0fbab5ae-2209-4e76-a112-fe4aee2e16ff
-  Mesh: !<reference> d97d6130-42c1-4659-81d7-1b52e539bd88
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}

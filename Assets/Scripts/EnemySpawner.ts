@@ -21,6 +21,7 @@ export class NewScript extends BaseScriptComponent {
     }
 
     spawnEnemy() {
+        print("Spawning enemy")
         var enemyInstance = this.enemyPrefab.instantiate(this.spawnParent);
         enemyInstance.getTransform().setWorldPosition(new vec3(0,0,-30));
     }

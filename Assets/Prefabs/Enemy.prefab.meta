@@ -12,23 +12,46 @@
   ImporterSettings: !<AssetImporterSettings/2affc6dd-aa2a-45b2-a55b-76fd8811d41e>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/203bd02f-6588-4d89-9f4f-b402cdaf3bec>
+- !<ScriptComponent/269c26e7-b7c8-4ae8-9fd4-3b0d9d468814>
   PrefabRemaps:
     []
-  Name: Enemy
+  Name: EnemyChase
   Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
-    hasSegmentScaleCompensation: false
-  Children:
+  ScriptAsset: !<reference> 91c59b3c-4800-4d68-af88-1ad00e8efebc
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      userObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+  ScriptTypes:
+    "":
+      {}
+- !<BodyComponent/49eca895-e78c-47f1-80ff-e233cb009f63>
+  PrefabRemaps:
     []
-  Components:
-    - !<own> 26952a70-5c04-4152-bb68-061f1c97cf66
-    - !<own> 393cad69-b1e4-4e97-b3d8-f83d84df8765
-- !<RenderMeshVisual/26952a70-5c04-4152-bb68-061f1c97cf66>
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<RenderMeshVisual/6ec959fd-6ee9-49dc-a991-5eeeb04f7d41>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -48,31 +71,33 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ScriptComponent/393cad69-b1e4-4e97-b3d8-f83d84df8765>
+- !<SceneObject/7d7ade4d-af31-4e92-b7c0-2c4b5ca87802>
   PrefabRemaps:
     []
-  Name: EnemyChase
+  Name: Enemy
   Enabled: true
-  ScriptAsset: !<reference> 91c59b3c-4800-4d68-af88-1ad00e8efebc
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      userObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-  ScriptTypes:
-    "":
-      {}
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6ec959fd-6ee9-49dc-a991-5eeeb04f7d41
+    - !<own> 269c26e7-b7c8-4ae8-9fd4-3b0d9d468814
+    - !<own> 49eca895-e78c-47f1-80ff-e233cb009f63
 - !<ObjectPrefabAssetData/8c9f9a55-6006-4aeb-b346-5d7721f1a664>
   SourceRemaps:
-    - 185e448e-6999-4d68-b542-5f0215c71e35: 203bd02f-6588-4d89-9f4f-b402cdaf3bec
-    - 3f25a12c-d365-4dc1-ae6f-cdf64377e587: 26952a70-5c04-4152-bb68-061f1c97cf66
-    - b88fbfba-65b0-454e-828a-181c16b5de7f: 393cad69-b1e4-4e97-b3d8-f83d84df8765
-  SourceState: !<own> bb388dcb-965b-44a4-871d-9cfc1aee940e
-- !<ObjectPrefab/bb388dcb-965b-44a4-871d-9cfc1aee940e>
+    - 185e448e-6999-4d68-b542-5f0215c71e35: 7d7ade4d-af31-4e92-b7c0-2c4b5ca87802
+    - 186bed7b-50be-4902-b7df-28718a446e0c: 49eca895-e78c-47f1-80ff-e233cb009f63
+    - 3f25a12c-d365-4dc1-ae6f-cdf64377e587: 6ec959fd-6ee9-49dc-a991-5eeeb04f7d41
+    - b88fbfba-65b0-454e-828a-181c16b5de7f: 269c26e7-b7c8-4ae8-9fd4-3b0d9d468814
+  SourceState: !<own> ccaad400-0dd5-4e11-b1bd-aab80ffe8a91
+- !<ObjectPrefab/ccaad400-0dd5-4e11-b1bd-aab80ffe8a91>
   PackagePath: ""
   objects:
-    - !<own> 203bd02f-6588-4d89-9f4f-b402cdaf3bec
+    - !<own> 7d7ade4d-af31-4e92-b7c0-2c4b5ca87802
   LazyLoading: false
   RetainAssets: true
