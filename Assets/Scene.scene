@@ -5,6 +5,7 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 597f6fa4-23e5-4230-9e74-1ece142cd000
     - !<own> ffab49d8-5118-45da-8fcc-ffa3cd677c9a
+    - !<own> cefcaa17-b5a9-4745-b689-ba29714e0976
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -3357,9 +3358,9 @@
     []
   Name: Physics Body
   Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+  Shape: !<Box/00000000-0000-0000-0000-000000000000>
     FitVisual: true
-    Radius: 6.000000
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6611,6 +6612,24 @@
   ScriptTypes:
     "":
       {}
+- !<ColliderComponent/ba0bf5fe-8f1b-4c04-b97d-4bf4fe131f44>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Box/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
 - !<ScriptComponent/bad2a685-012c-4f96-bed9-fef0d5868599>
   PrefabRemaps:
     []
@@ -7153,6 +7172,22 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/ca63e397-284e-42c1-98c6-1987ee367ded>
+  PrefabRemaps:
+    []
+  Name: Player
+  Enabled: true
+  ScriptAsset: !<reference> e1c9c38d-0e09-4a29-9c1b-9b66d72faffd
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/cb3a4816-b190-4dc0-ab2c-1ed4d19b25e4>
   PrefabRemaps:
     []
@@ -7272,6 +7307,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/cefcaa17-b5a9-4745-b689-ba29714e0976>
+  PrefabRemaps:
+    []
+  Name: Player
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ca63e397-284e-42c1-98c6-1987ee367ded
 - !<SceneObject/cf3bc4e4-ebc8-4bba-9fa6-b51856e9947d>
   PrefabRemaps:
     []
@@ -9037,6 +9087,7 @@
     - !<own> 285e675f-1b16-4266-a2d4-d4b198f1ad94
     - !<own> 8c1cbc6b-ae27-4b7a-92a1-4d48e07a2191
     - !<own> 575736fc-8d12-4de4-b3d0-13b3af09dcc3
+    - !<own> ba0bf5fe-8f1b-4c04-b97d-4bf4fe131f44
 - !<SceneObject/ffe425e3-557d-4e1d-824c-e5f378f4a39e>
   PrefabRemaps:
     []
