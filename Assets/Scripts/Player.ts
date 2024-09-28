@@ -6,7 +6,7 @@ export class Player extends BaseScriptComponent {
     private gestureModule: GestureModule = require('LensStudio:GestureModule');
 
     @input 
-    attack_cooldown: number = 2.0;
+    attack_cooldown: number = 1.0;
     attack_timer = this.attack_cooldown;
     onAwake() {
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
@@ -27,7 +27,6 @@ export class Player extends BaseScriptComponent {
         probe.debugDrawEnabled = true
         probe.filter.includeStatic = true;
         probe.filter.includeDynamic = false;
-        probe.filter.includeIntangible = true;
 
         let end = targetArgs.rayOriginInWorld.add(targetArgs.rayDirectionInWorld.uniformScale(100));
         

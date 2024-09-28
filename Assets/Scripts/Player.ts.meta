@@ -24,14 +24,13 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    attack_cooldown: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    -
-      {}
+    - attack_cooldown: !<float> 2.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input float attack_cooldown = 2.0
