@@ -4,6 +4,9 @@ export class EnemyChase extends BaseScriptComponent {
     speed : number;
 
     @input
+    turn_speed: number;
+
+    @input
     userObj: SceneObject
 
     enemy = this.getSceneObject()
@@ -40,11 +43,16 @@ export class EnemyChase extends BaseScriptComponent {
 
         move_vec = move_vec.normalize()
 
-        let newPos = currPos.add(move_vec.uniformScale(this.speed * getDeltaTime()))
+        let newPos = currPos.add(this.userObj.getTransform().forward.uniformScale(this.speed * getDeltaTime()))
 
         //print(newPos)
 
         this.enemy.getTransform().setWorldPosition(newPos)
+
+        let newRot = quat.lookAt(move_vec, vec3.up());
+
+
+        this.enemy.getTransform().setWorldRotation(quat.slerp(this.enemy.getTransform().getWorldRotation(), newRot, this.turn_speed * getDeltaTime()))
 
     }
 }

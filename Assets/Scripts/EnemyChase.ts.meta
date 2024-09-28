@@ -25,15 +25,18 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     speed: true
+    turn_speed: false
     userObj: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - speed: !<float> 30.000000
       userObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      turn_speed: !<float> 0.000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input float speed
+    - // @input float turn_speed
     - // @input SceneObject userObj
