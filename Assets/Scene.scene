@@ -3388,6 +3388,29 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<BodyComponent/575736fc-8d12-4de4-b3d0-13b3af09dcc3>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
 - !<SceneObject/5772ff9e-cf87-4b10-8d74-d9329635251a>
   PrefabRemaps:
     []
@@ -6086,7 +6109,7 @@
   PrefabRemaps:
     []
   Name: "[OPTIONAL] Visuals"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -9040,7 +9063,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -221.782364}
+    position: {x: 0.000000, y: 0.000000, z: -55.560135}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
@@ -9049,6 +9072,7 @@
   Components:
     - !<own> 285e675f-1b16-4266-a2d4-d4b198f1ad94
     - !<own> 8c1cbc6b-ae27-4b7a-92a1-4d48e07a2191
+    - !<own> 575736fc-8d12-4de4-b3d0-13b3af09dcc3
 - !<SceneObject/ffe425e3-557d-4e1d-824c-e5f378f4a39e>
   PrefabRemaps:
     []
