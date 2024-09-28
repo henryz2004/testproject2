@@ -7,6 +7,13 @@ export class Player extends BaseScriptComponent {
 
     @input 
     attack_cooldown: number = 1.0;
+
+    @input
+    projectile_obj: ObjectPrefab;
+    
+    @input
+    launch_velocity: number;
+
     attack_timer = this.attack_cooldown;
     onAwake() {
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
@@ -23,6 +30,15 @@ export class Player extends BaseScriptComponent {
         }
         this.attack_timer = this.attack_cooldown;
         print('SHOT FIRED')
+
+
+        let curr_proj = this.projectile_obj.instantiate(this.getSceneObject())
+        curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
+
+        let rb = curr_proj.getComponent('Physics.BodyComponent');
+
+        rb.velocity = targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity)
+        /*
         let probe = Physics.createGlobalProbe();
         probe.debugDrawEnabled = true
         probe.filter.includeStatic = true;
@@ -40,7 +56,10 @@ export class Player extends BaseScriptComponent {
 
             thing_I_shot.destroy()
         })
+        */
         });
+        
+        
 
     
     }
