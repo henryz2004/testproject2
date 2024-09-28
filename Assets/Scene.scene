@@ -2350,7 +2350,7 @@
     xAlways: true
     yAlways: true
     worldSnapping: true
-    isFollowing: true
+    showFollowButton: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -2374,9 +2374,9 @@
       useSnapping: true
       itemSnapping: true
       worldSnapping: false
-      showFollowButton: true
+      showFollowButton: false
       useFOVFollow: true
-      isFollowing: false
+      isFollowing: true
       showCloseButton: false
   ScriptTypes:
     "":
@@ -2961,7 +2961,7 @@
     "":
       enemyPrefab: !<reference.ObjectPrefab> bedd0adf-7765-4574-8836-0e3456e65104
       spawnParent: !<reference.SceneObject> 644609e7-e643-44c7-aca8-2003ee13af98
-      spawnTime: !<float> 5.000000
+      spawnTime: 0.500000
   ScriptTypes:
     "":
       {}
@@ -4713,6 +4713,22 @@
     - !<own> a694805f-1b38-4332-a2d4-461f08b15870
   Components:
     []
+- !<ScriptComponent/7994c2b8-6531-4a6a-9817-6b4542b55df0>
+  PrefabRemaps:
+    []
+  Name: ScoreUI
+  Enabled: true
+  ScriptAsset: !<reference> 8e7149da-3b4b-4316-9fe8-c924c1230cee
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/79f133d3-5281-4b2f-aeae-3da9498768c8>
   PrefabRemaps:
     []
@@ -6140,6 +6156,7 @@
     []
   Components:
     - !<own> ff535890-84f2-455a-8017-452169943b54
+    - !<own> 7994c2b8-6531-4a6a-9817-6b4542b55df0
 - !<SceneObject/a57a7ca3-e822-4148-855b-96a8a55a5b94>
   PrefabRemaps:
     []
