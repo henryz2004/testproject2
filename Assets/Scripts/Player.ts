@@ -13,7 +13,7 @@ export class Player extends BaseScriptComponent {
         //   print('Is Valid: ' + targetArgs.isValid);
         //   print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
         //   print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
-
+        print('SHOT FIRED')
         let probe = Physics.createGlobalProbe();
         probe.debugDrawEnabled = true
         probe.filter.includeStatic = true;
@@ -24,10 +24,12 @@ export class Player extends BaseScriptComponent {
         
         probe.rayCast(targetArgs.rayOriginInWorld, end, function (hit){
             if(hit === null){
+                print('SHOT MISSED')
                 return;
             }
+            print('SHOT HIT')
             let thing_I_shot = hit.collider.getSceneObject()
-            
+
             thing_I_shot.destroy()
         })
         });
