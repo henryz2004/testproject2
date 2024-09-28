@@ -25,7 +25,7 @@ export class Player extends BaseScriptComponent {
         //print('Is Valid: ' + targetArgs.isValid);
         //print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
         //print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
-        if(this.attack_timer > 0){
+        if(this.attack_timer > 0 || !targetArgs.isValid){
             //print('ON COOLDOWN')
             return
         }
@@ -51,7 +51,7 @@ export class Player extends BaseScriptComponent {
         //let test: vec3 = new vec3(0,10000,0)
         
         
-        rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.Impulse)
+        rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.VelocityChange)
         
         
         //rb.addForce(new vec3(0,1000,0), Physics.ForceMode.Impulse)
