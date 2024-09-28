@@ -51,7 +51,7 @@ export class Player extends BaseScriptComponent {
         //let test: vec3 = new vec3(0,10000,0)
         
         
-        rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.Impulse)
+        rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.VelocityChange)
         
         
         //rb.addForce(new vec3(0,1000,0), Physics.ForceMode.Impulse)
