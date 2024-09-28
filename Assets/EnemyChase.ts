@@ -12,6 +12,7 @@ export class EnemyChase extends BaseScriptComponent {
         //print("HLOL")
 
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
+        print("speed "+this.speed);
 
     }
 

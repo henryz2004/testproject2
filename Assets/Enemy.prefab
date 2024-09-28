@@ -52,7 +52,6 @@
     {}
   ScriptInputs:
     "":
-      speed: !<float> 1.000000
       userObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
   ScriptTypes:
     "":
