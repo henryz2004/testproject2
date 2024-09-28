@@ -4,22 +4,6 @@
     - !<own> 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b
   LazyLoading: false
   RetainAssets: true
-- !<ScriptComponent/1150b8aa-edf5-4087-976e-80e232b3d48b>
-  PrefabRemaps:
-    []
-  Name: Projectile
-  Enabled: true
-  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<RenderMeshVisual/18858351-3e95-4d35-8d94-ef35dc1459b3>
   PrefabRemaps:
     []
@@ -56,26 +40,7 @@
   Components:
     - !<own> 18858351-3e95-4d35-8d94-ef35dc1459b3
     - !<own> f29e6423-8f41-45a6-8a98-7cdc0e768650
-    - !<own> 991d1551-a41b-4394-8767-ebae60bf4162
-    - !<own> 1150b8aa-edf5-4087-976e-80e232b3d48b
-- !<ColliderComponent/991d1551-a41b-4394-8767-ebae60bf4162>
-  PrefabRemaps:
-    []
-  Name: Physics Collider
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
+    - !<own> fbe5a101-9924-418b-aefa-f0ac92c7d368
 - !<BodyComponent/f29e6423-8f41-45a6-8a98-7cdc0e768650>
   PrefabRemaps:
     []
@@ -99,3 +64,19 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
+- !<ScriptComponent/fbe5a101-9924-418b-aefa-f0ac92c7d368>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}

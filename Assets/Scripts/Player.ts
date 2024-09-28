@@ -22,9 +22,9 @@ export class Player extends BaseScriptComponent {
     this.gestureModule
         .getTargetingDataEvent(GestureModule.HandType.Right)
         .add((targetArgs: TargetingDataArgs) => {
-        print('Is Valid: ' + targetArgs.isValid);
-        print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
-        print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
+        //print('Is Valid: ' + targetArgs.isValid);
+        //print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
+        //print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
         if(this.attack_timer > 0){
             //print('ON COOLDOWN')
             return
@@ -34,15 +34,31 @@ export class Player extends BaseScriptComponent {
 
 
         let curr_proj = this.projectile_obj.instantiate(this.getSceneObject())
+        //curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
+
+
         curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
 
-        let matrix = curr_proj.getTransform().getWorldTransform()
+        
 
         let rb = curr_proj.getComponent('Physics.BodyComponent');
 
-        rb.velocity = matrix.multiplyPoint(targetArgs.rayDirectionInWorld).normalize().uniformScale(this.launch_velocity)
+        if(rb === null){
+            print('NO RIGIDBODY AHHH')
+        }
 
-        print(rb.velocity)
+        //rb.velocity = targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity)
+        //let test: vec3 = new vec3(0,10000,0)
+        
+        
+        rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.Impulse)
+        
+        
+        //rb.addForce(new vec3(0,1000,0), Physics.ForceMode.Impulse)
+        //rb.velocity = test
+
+        
+        //print(rb.velocity)
         
         /*
         let probe = Physics.createGlobalProbe();
