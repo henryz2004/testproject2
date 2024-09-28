@@ -5,14 +5,23 @@ import { SIK } from "SpectaclesInteractionKit/SIK"
 export class Player extends BaseScriptComponent {
     private gestureModule: GestureModule = require('LensStudio:GestureModule');
 
+    @input 
+    attack_cooldown: number = 2.0;
+    attack_timer = this.attack_cooldown;
     onAwake() {
-        
+        this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
+
     this.gestureModule
         .getTargetingDataEvent(GestureModule.HandType.Right)
         .add((targetArgs: TargetingDataArgs) => {
         //   print('Is Valid: ' + targetArgs.isValid);
         //   print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
         //   print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
+        if(this.attack_timer > 0){
+            print('ON COOLDOWN')
+            return
+        }
+        this.attack_timer = this.attack_cooldown;
         print('SHOT FIRED')
         let probe = Physics.createGlobalProbe();
         probe.debugDrawEnabled = true
@@ -35,5 +44,12 @@ export class Player extends BaseScriptComponent {
         });
 
     
+    }
+
+    onUpdate(){
+
+
+        this.attack_timer -= getDeltaTime();
+        
     }
 }
