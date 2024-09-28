@@ -1,0 +1,4 @@
+- !<WorldMesh/0c7fb9fb-d85d-44c0-bd8e-b32b0396fa1c>
+  PackagePath: ""
+  UseNormals: true
+  MeshClassificationFormat: PerVertexFast
