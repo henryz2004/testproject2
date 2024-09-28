@@ -11,7 +11,11 @@
     - !<own> c2602146-adf8-4053-b9c7-a8bb682ae8a0
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
-      []
+      - |
+        id: 1
+        name: Overlay
+        color: 0
+
     HasOrtho: true
   RenderOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
   RenderPreviewOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
@@ -6791,9 +6795,9 @@
     []
   Name: ContainerFrameUI
   Enabled: true
-  Layers: 1
+  Layers: 2
   LocalTransform:
-    position: {x: 4.233650, y: -34.243164, z: -65.000000}
+    position: {x: 0.000000, y: -25.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -7090,6 +7094,7 @@
   PrefabRemaps:
     - 0e3cd268-aa36-4800-bbcd-653db704e890: f29e6423-8f41-45a6-8a98-7cdc0e768650
     - 1d660006-f5b1-4387-92e5-da31dd17dece: 18858351-3e95-4d35-8d94-ef35dc1459b3
+    - 1e4e0e39-763a-4609-b8f9-297f25344279: e3eac831-acf4-4019-9a23-14faf86d71f4
     - 953b8719-8873-4492-b127-6990c81ae43f: fbe5a101-9924-418b-aefa-f0ac92c7d368
     - c2602146-adf8-4053-b9c7-a8bb682ae8a0: 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b
   Name: Projectile
@@ -7377,7 +7382,7 @@
     "":
       attack_cooldown: 0.500000
       projectile_obj: !<reference.ObjectPrefab> 34e56010-2b68-46ec-a8c6-d0d0578715b5
-      launch_velocity: !<float> 50000.000000
+      launch_velocity: !<float> 1000000.000000
   ScriptTypes:
     "":
       {}

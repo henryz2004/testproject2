@@ -12,20 +12,57 @@
   ImporterSettings: !<AssetImporterSettings/570a81d3-76f1-4b2c-a65e-3b481acd01fb>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefab/4006ddd6-595b-41e5-944a-a6350bc54c9e>
-  PackagePath: ""
-  objects:
-    - !<own> bb567146-f14d-42d6-ac19-c95346d2aafc
-  LazyLoading: false
-  RetainAssets: true
+- !<SceneObject/3977a733-942e-4265-9e2e-cb38e43714ce>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 76b6ea51-7aef-40cc-9fbe-f4e62f62af10
+    - !<own> 7d1f6414-c93a-4fa9-8df2-d439a74d1580
+    - !<own> ae40666d-4567-4e91-9ad8-29d225ed780f
 - !<ObjectPrefabAssetData/7040a696-d756-4502-9162-ec01283937be>
   SourceRemaps:
-    - 18858351-3e95-4d35-8d94-ef35dc1459b3: cebbda0d-40ba-423f-99cf-53298733ea10
-    - 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b: bb567146-f14d-42d6-ac19-c95346d2aafc
-    - f29e6423-8f41-45a6-8a98-7cdc0e768650: aeef9691-632f-4a5a-b9e2-4682323060ad
-    - fbe5a101-9924-418b-aefa-f0ac92c7d368: e14c09b1-2ab5-4070-bb8d-1c37a54e251f
-  SourceState: !<own> 4006ddd6-595b-41e5-944a-a6350bc54c9e
-- !<BodyComponent/aeef9691-632f-4a5a-b9e2-4682323060ad>
+    - 18858351-3e95-4d35-8d94-ef35dc1459b3: 76b6ea51-7aef-40cc-9fbe-f4e62f62af10
+    - 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b: 3977a733-942e-4265-9e2e-cb38e43714ce
+    - e3eac831-acf4-4019-9a23-14faf86d71f4: ae40666d-4567-4e91-9ad8-29d225ed780f
+    - f29e6423-8f41-45a6-8a98-7cdc0e768650: 7d1f6414-c93a-4fa9-8df2-d439a74d1580
+  SourceState: !<own> 7b0e9f22-607b-437b-88da-492dd949191a
+- !<RenderMeshVisual/76b6ea51-7aef-40cc-9fbe-f4e62f62af10>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0fbab5ae-2209-4e76-a112-fe4aee2e16ff
+  Mesh: !<reference> d97d6130-42c1-4659-81d7-1b52e539bd88
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/7b0e9f22-607b-437b-88da-492dd949191a>
+  PackagePath: ""
+  objects:
+    - !<own> 3977a733-942e-4265-9e2e-cb38e43714ce
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/7d1f6414-c93a-4fa9-8df2-d439a74d1580>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -48,44 +85,7 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<SceneObject/bb567146-f14d-42d6-ac19-c95346d2aafc>
-  PrefabRemaps:
-    []
-  Name: Projectile
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> cebbda0d-40ba-423f-99cf-53298733ea10
-    - !<own> aeef9691-632f-4a5a-b9e2-4682323060ad
-    - !<own> e14c09b1-2ab5-4070-bb8d-1c37a54e251f
-- !<RenderMeshVisual/cebbda0d-40ba-423f-99cf-53298733ea10>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 0fbab5ae-2209-4e76-a112-fe4aee2e16ff
-  Mesh: !<reference> d97d6130-42c1-4659-81d7-1b52e539bd88
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<ScriptComponent/e14c09b1-2ab5-4070-bb8d-1c37a54e251f>
+- !<ScriptComponent/ae40666d-4567-4e91-9ad8-29d225ed780f>
   PrefabRemaps:
     []
   Name: Projectile

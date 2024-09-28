@@ -40,7 +40,23 @@
   Components:
     - !<own> 18858351-3e95-4d35-8d94-ef35dc1459b3
     - !<own> f29e6423-8f41-45a6-8a98-7cdc0e768650
-    - !<own> fbe5a101-9924-418b-aefa-f0ac92c7d368
+    - !<own> e3eac831-acf4-4019-9a23-14faf86d71f4
+- !<ScriptComponent/e3eac831-acf4-4019-9a23-14faf86d71f4>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<BodyComponent/f29e6423-8f41-45a6-8a98-7cdc0e768650>
   PrefabRemaps:
     []
@@ -64,19 +80,3 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/fbe5a101-9924-418b-aefa-f0ac92c7d368>
-  PrefabRemaps:
-    []
-  Name: Projectile
-  Enabled: true
-  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}

@@ -12,13 +12,13 @@ export class Projectile extends BaseScriptComponent {
             let collision: Collision = e.collision;
             let collider: ColliderComponent = e.collision.collider
             if(collider.getSceneObject().name.startsWith("Enemy")){
-                collision.collider.getSceneObject().destroy()
-                print('destroyed enemy')
-                this.enabled = false;
-
                 let currentScore = store.getInt(scoreKey);
 				currentScore += 1;
 				store.putInt(scoreKey, currentScore);
+
+                collision.collider.getSceneObject().destroy()
+                print('destroyed enemy')
+                this.getSceneObject().enabled = false;
                 
             }
           });
