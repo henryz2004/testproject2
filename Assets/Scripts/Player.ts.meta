@@ -24,13 +24,14 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    cylinderObject: false
+    {}
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - cylinderObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    -
+      {}
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input SceneObject cylinderObject
+    []
