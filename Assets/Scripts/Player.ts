@@ -15,6 +15,7 @@ export class Player extends BaseScriptComponent {
     launch_velocity: number;
 
     attack_timer = this.attack_cooldown;
+    projectile_list: SceneObject[] = [];
 
     onAwake() {
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
@@ -34,6 +35,8 @@ export class Player extends BaseScriptComponent {
 
 
         let curr_proj = this.projectile_obj.instantiate(this.getSceneObject())
+        this.projectile_list.push(curr_proj)
+        print("PROJECTILE LIST LENGTH: " + this.projectile_list.length)
         //curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
 
 
@@ -90,6 +93,14 @@ export class Player extends BaseScriptComponent {
 
 
         this.attack_timer -= getDeltaTime();
-        
+
+        this.projectile_list = this.projectile_list.filter((proj) => {
+                if (!proj.enabled) {
+                    proj.destroy()
+                    return false
+                }
+                return true
+            }
+        )
     }
 }

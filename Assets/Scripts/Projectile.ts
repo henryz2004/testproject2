@@ -3,6 +3,9 @@ export class Projectile extends BaseScriptComponent {
     rb = this.getSceneObject().getComponent('Physics.BodyComponent');
 
     onAwake() {
+        let store = global.persistentStorageSystem.store;
+		let scoreKey = "totalScore";
+
         this.rb.onCollisionEnter.add((e: CollisionEnterEventArgs) => {
 
             print("COLLISION HAPPENED")
@@ -11,9 +14,11 @@ export class Projectile extends BaseScriptComponent {
             if(collider.getSceneObject().name.startsWith("Enemy")){
                 collision.collider.getSceneObject().destroy()
                 print('destroyed enemy')
-                if(this.getSceneObject()){
-                    this.getSceneObject().destroy()
-                }
+                this.enabled = false;
+
+                let currentScore = store.getInt(scoreKey);
+				currentScore += 1;
+				store.putInt(scoreKey, currentScore);
                 
             }
           });
