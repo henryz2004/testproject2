@@ -7360,7 +7360,7 @@
     "":
       attack_cooldown: 0.500000
       projectile_obj: !<reference.ObjectPrefab> 34e56010-2b68-46ec-a8c6-d0d0578715b5
-      launch_velocity: !<float> 10000.000000
+      launch_velocity: !<float> 50000.000000
   ScriptTypes:
     "":
       {}
@@ -8104,12 +8104,13 @@
     - 115a5b82-876c-41c6-a86c-6f9ddd82e3e1: 3f25a12c-d365-4dc1-ae6f-cdf64377e587
     - 9a27847b-b4de-4be7-bca7-440c2611f44f: 186bed7b-50be-4902-b7df-28718a446e0c
     - a8746430-c97d-4453-a803-7b8ffdc4e76e: b88fbfba-65b0-454e-828a-181c16b5de7f
+    - daf614a9-1221-4570-9a94-3bb79d00aab3: a7fa0de3-006f-49fc-9c86-421671db03de
     - e46c11b5-7e81-4064-a328-3eb839868cf0: 185e448e-6999-4d68-b542-5f0215c71e35
   Name: Enemy
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -18.369381, z: -170.151733}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false

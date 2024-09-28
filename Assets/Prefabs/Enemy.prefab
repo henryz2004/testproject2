@@ -20,6 +20,7 @@
   Components:
     - !<own> 3f25a12c-d365-4dc1-ae6f-cdf64377e587
     - !<own> b88fbfba-65b0-454e-828a-181c16b5de7f
+    - !<own> a7fa0de3-006f-49fc-9c86-421671db03de
     - !<own> 186bed7b-50be-4902-b7df-28718a446e0c
 - !<BodyComponent/186bed7b-50be-4902-b7df-28718a446e0c>
   PrefabRemaps:
@@ -64,6 +65,29 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<BodyComponent/a7fa0de3-006f-49fc-9c86-421671db03de>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
 - !<ScriptComponent/b88fbfba-65b0-454e-828a-181c16b5de7f>
   PrefabRemaps:
     []
