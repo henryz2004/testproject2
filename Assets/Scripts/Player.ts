@@ -39,7 +39,8 @@ export class Player extends BaseScriptComponent {
 
         let rb = curr_proj.getComponent('Physics.BodyComponent');
 
-        rb.velocity = matrix.multiplyPoint(targetArgs.rayDirectionInWorld.normalize()).uniformScale(this.launch_velocity)
+        rb.velocity = matrix.multiplyPoint(targetArgs.rayDirectionInWorld).normalize().uniformScale(this.launch_velocity)
+        
         /*
         let probe = Physics.createGlobalProbe();
         probe.debugDrawEnabled = true
