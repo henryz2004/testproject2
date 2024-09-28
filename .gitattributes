@@ -92,3 +92,4 @@ Assets/**/*.worldSettings !filter !diff !merge text linguist-language=yaml merge
 Assets/**/*.worldUnderstandingModule !filter !diff !merge text linguist-language=yaml merge=lens-studio-yaml-merge
 Assets/**/*.worldmesh !filter !diff !merge text linguist-language=yaml merge=lens-studio-yaml-merge
 # Shipped by Lens Studio
+*.bin filter=lfs diff=lfs merge=lfs -text
