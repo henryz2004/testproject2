@@ -25,7 +25,7 @@ export class Player extends BaseScriptComponent {
         //print('Is Valid: ' + targetArgs.isValid);
         //print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
         //print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
-        if(this.attack_timer > 0){
+        if(this.attack_timer > 0 || !targetArgs.isValid){
             //print('ON COOLDOWN')
             return
         }
