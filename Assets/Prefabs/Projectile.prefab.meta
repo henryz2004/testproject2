@@ -12,7 +12,7 @@
   ImporterSettings: !<AssetImporterSettings/570a81d3-76f1-4b2c-a65e-3b481acd01fb>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/03b480b9-5dbf-4a0c-a148-061036ff773f>
+- !<SceneObject/52ade542-d031-43f4-a932-a630161a716d>
   PrefabRemaps:
     []
   Name: Projectile
@@ -26,11 +26,39 @@
   Children:
     []
   Components:
-    - !<own> 67675669-7fad-4e0d-9b72-e8f2f9f4359a
-    - !<own> 4ab2c726-bbd2-4041-a0eb-47200a21e2ab
-    - !<own> 579b1168-84dc-4bc8-975e-cdc452bfdeea
-    - !<own> e26e10a4-41a9-4459-bafb-d9d92758df1a
-- !<BodyComponent/4ab2c726-bbd2-4041-a0eb-47200a21e2ab>
+    - !<own> dea2c638-6ac1-48a5-a9dc-7736dca32b79
+    - !<own> a287053b-6f98-4eb1-a81c-dd01f79b61e0
+    - !<own> 5f8835e3-f306-44a2-82a3-25379159e6d5
+- !<ScriptComponent/5f8835e3-f306-44a2-82a3-25379159e6d5>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefab/6bc173b0-d9bb-4eff-9f56-eaa41f861f7a>
+  PackagePath: ""
+  objects:
+    - !<own> 52ade542-d031-43f4-a932-a630161a716d
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/7040a696-d756-4502-9162-ec01283937be>
+  SourceRemaps:
+    - 18858351-3e95-4d35-8d94-ef35dc1459b3: dea2c638-6ac1-48a5-a9dc-7736dca32b79
+    - 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b: 52ade542-d031-43f4-a932-a630161a716d
+    - f29e6423-8f41-45a6-8a98-7cdc0e768650: a287053b-6f98-4eb1-a81c-dd01f79b61e0
+    - fbe5a101-9924-418b-aefa-f0ac92c7d368: 5f8835e3-f306-44a2-82a3-25379159e6d5
+  SourceState: !<own> 6bc173b0-d9bb-4eff-9f56-eaa41f861f7a
+- !<BodyComponent/a287053b-6f98-4eb1-a81c-dd01f79b61e0>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -53,25 +81,7 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ColliderComponent/579b1168-84dc-4bc8-975e-cdc452bfdeea>
-  PrefabRemaps:
-    []
-  Name: Physics Collider
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-- !<RenderMeshVisual/67675669-7fad-4e0d-9b72-e8f2f9f4359a>
+- !<RenderMeshVisual/dea2c638-6ac1-48a5-a9dc-7736dca32b79>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -91,33 +101,3 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ObjectPrefabAssetData/7040a696-d756-4502-9162-ec01283937be>
-  SourceRemaps:
-    - 1150b8aa-edf5-4087-976e-80e232b3d48b: e26e10a4-41a9-4459-bafb-d9d92758df1a
-    - 18858351-3e95-4d35-8d94-ef35dc1459b3: 67675669-7fad-4e0d-9b72-e8f2f9f4359a
-    - 6865ef3f-ccc5-44ae-a84a-61ea099d1b8b: 03b480b9-5dbf-4a0c-a148-061036ff773f
-    - 991d1551-a41b-4394-8767-ebae60bf4162: 579b1168-84dc-4bc8-975e-cdc452bfdeea
-    - f29e6423-8f41-45a6-8a98-7cdc0e768650: 4ab2c726-bbd2-4041-a0eb-47200a21e2ab
-  SourceState: !<own> 89926a3b-aa22-49bf-a12f-790f5b8b5e32
-- !<ObjectPrefab/89926a3b-aa22-49bf-a12f-790f5b8b5e32>
-  PackagePath: ""
-  objects:
-    - !<own> 03b480b9-5dbf-4a0c-a148-061036ff773f
-  LazyLoading: false
-  RetainAssets: true
-- !<ScriptComponent/e26e10a4-41a9-4459-bafb-d9d92758df1a>
-  PrefabRemaps:
-    []
-  Name: Projectile
-  Enabled: true
-  ScriptAsset: !<reference> f410ab3f-19f7-413a-a8b8-14883af7d4f3
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
