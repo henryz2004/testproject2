@@ -1,0 +1,78 @@
+- !<AssetImportMetadata/406e4d13-11dd-43a2-a4a2-14bf888f9c87>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> bedd0adf-7765-4574-8836-0e3456e65104
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> bedd0adf-7765-4574-8836-0e3456e65104
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 8c9f9a55-6006-4aeb-b346-5d7721f1a664
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/2affc6dd-aa2a-45b2-a55b-76fd8811d41e>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/203bd02f-6588-4d89-9f4f-b402cdaf3bec>
+  PrefabRemaps:
+    []
+  Name: Enemy
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 26952a70-5c04-4152-bb68-061f1c97cf66
+    - !<own> 393cad69-b1e4-4e97-b3d8-f83d84df8765
+- !<RenderMeshVisual/26952a70-5c04-4152-bb68-061f1c97cf66>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2bd83272-594f-4064-84e7-0e850686e02a
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/393cad69-b1e4-4e97-b3d8-f83d84df8765>
+  PrefabRemaps:
+    []
+  Name: EnemyChase
+  Enabled: true
+  ScriptAsset: !<reference> 91c59b3c-4800-4d68-af88-1ad00e8efebc
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      userObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/8c9f9a55-6006-4aeb-b346-5d7721f1a664>
+  SourceRemaps:
+    - 185e448e-6999-4d68-b542-5f0215c71e35: 203bd02f-6588-4d89-9f4f-b402cdaf3bec
+    - 3f25a12c-d365-4dc1-ae6f-cdf64377e587: 26952a70-5c04-4152-bb68-061f1c97cf66
+    - b88fbfba-65b0-454e-828a-181c16b5de7f: 393cad69-b1e4-4e97-b3d8-f83d84df8765
+  SourceState: !<own> bb388dcb-965b-44a4-871d-9cfc1aee940e
+- !<ObjectPrefab/bb388dcb-965b-44a4-871d-9cfc1aee940e>
+  PackagePath: ""
+  objects:
+    - !<own> 203bd02f-6588-4d89-9f4f-b402cdaf3bec
+  LazyLoading: false
+  RetainAssets: true

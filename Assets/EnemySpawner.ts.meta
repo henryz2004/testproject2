@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/1beec2a8-d951-4467-9ef7-683421fcaf8a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5c91c295-1811-47b4-89a6-85bee80ba267
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5c91c295-1811-47b4-89a6-85bee80ba267
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 88567238-947d-4a7b-9fb7-b573b5e3077d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/7e534d6f-4716-4b6a-8156-e7fc95443cd6>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/88567238-947d-4a7b-9fb7-b573b5e3077d>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    enemyPrefab: false
+    spawnParent: false
+    spawnTime: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - enemyPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      spawnParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      spawnTime: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.ObjectPrefab enemyPrefab
+    - // @input SceneObject spawnParent
+    - // @input float spawnTime
