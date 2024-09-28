@@ -27,7 +27,7 @@ export class Player extends BaseScriptComponent {
                 return;
             }
             let thing_I_shot = hit.collider.getSceneObject()
-
+            
             thing_I_shot.destroy()
         })
         });

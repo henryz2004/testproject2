@@ -8,6 +8,8 @@ export class EnemyChase extends BaseScriptComponent {
 
     enemy = this.getSceneObject()
 
+    
+
     onAwake() {
         //print("HLOL")
 
@@ -24,7 +26,9 @@ export class EnemyChase extends BaseScriptComponent {
 
     private move(): void{
         let userPos: vec3 = this.userObj.getTransform().getWorldPosition()
-
+        if(this.enemy === null){
+            return
+        }
         let currPos: vec3 = this.enemy.getTransform().getWorldPosition()
 
         //print(currPos)
