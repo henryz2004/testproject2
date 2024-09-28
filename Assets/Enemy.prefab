@@ -1,0 +1,59 @@
+- !<ObjectPrefab/bedd0adf-7765-4574-8836-0e3456e65104>
+  PackagePath: ""
+  objects:
+    - !<own> 185e448e-6999-4d68-b542-5f0215c71e35
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/185e448e-6999-4d68-b542-5f0215c71e35>
+  PrefabRemaps:
+    []
+  Name: Enemy
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3f25a12c-d365-4dc1-ae6f-cdf64377e587
+    - !<own> b88fbfba-65b0-454e-828a-181c16b5de7f
+- !<RenderMeshVisual/3f25a12c-d365-4dc1-ae6f-cdf64377e587>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2bd83272-594f-4064-84e7-0e850686e02a
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/b88fbfba-65b0-454e-828a-181c16b5de7f>
+  PrefabRemaps:
+    []
+  Name: EnemyChase
+  Enabled: true
+  ScriptAsset: !<reference> 91c59b3c-4800-4d68-af88-1ad00e8efebc
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      speed: !<float> 1.000000
+      userObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+  ScriptTypes:
+    "":
+      {}
