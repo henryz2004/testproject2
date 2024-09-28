@@ -24,19 +24,13 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    cubePrefab: false
-    leftHandInteractor: false
-    rightHandInteractor: false
+    objectToCreate: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - cubePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      leftHandInteractor: !<MappingBased.HandInteractor> 00000000-0000-0000-0000-000000000000
-      rightHandInteractor: !<MappingBased.HandInteractor> 00000000-0000-0000-0000-000000000000
+    - objectToCreate: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Asset.ObjectPrefab cubePrefab
-    - // @input HandInteractor leftHandInteractor
-    - // @input HandInteractor rightHandInteractor
+    - // @input Asset.ObjectPrefab objectToCreate
