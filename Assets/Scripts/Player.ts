@@ -15,21 +15,22 @@ export class Player extends BaseScriptComponent {
     launch_velocity: number;
 
     attack_timer = this.attack_cooldown;
+
     onAwake() {
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
 
     this.gestureModule
         .getTargetingDataEvent(GestureModule.HandType.Right)
         .add((targetArgs: TargetingDataArgs) => {
-        //   print('Is Valid: ' + targetArgs.isValid);
-        //   print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
-        //   print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
+        print('Is Valid: ' + targetArgs.isValid);
+        print('Ray Origin In World: ' + targetArgs.rayOriginInWorld);
+        print('Ray Direction In World: ' + targetArgs.rayDirectionInWorld);
         if(this.attack_timer > 0){
-            print('ON COOLDOWN')
+            //print('ON COOLDOWN')
             return
         }
         this.attack_timer = this.attack_cooldown;
-        print('SHOT FIRED')
+        //print('SHOT FIRED')
 
 
         let curr_proj = this.projectile_obj.instantiate(this.getSceneObject())
@@ -40,6 +41,8 @@ export class Player extends BaseScriptComponent {
         let rb = curr_proj.getComponent('Physics.BodyComponent');
 
         rb.velocity = matrix.multiplyPoint(targetArgs.rayDirectionInWorld).normalize().uniformScale(this.launch_velocity)
+
+        print(rb.velocity)
         
         /*
         let probe = Physics.createGlobalProbe();
