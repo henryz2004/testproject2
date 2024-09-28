@@ -15,7 +15,7 @@ export class NewScript extends BaseScriptComponent {
     		let currentScore = store.getInt(scoreKey);
             currentScore += 1;
 			store.putInt(scoreKey, currentScore);
-		
+            spawnEvent.reset(this.spawnTime);		
         })
         spawnEvent.reset(this.spawnTime);
     }
